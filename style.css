@@ -1,0 +1,11 @@
+body {
+    flex:1;
+    background-color: #EA8FEA;
+    background-color: red;
+}
+html {
+    background-color: green;
+}
+#highlight{
+    color:red;
+}
