@@ -42,6 +42,9 @@ async function loadText(url) {
         renderLine(lines[i],id-5);
 
       }
+      setTimeout(function(){
+    document.getElementById("dummyInput").focus();
+},100);
       checkLine();
       //document.getElementById("test").innerText = makeLine(text[0]);
     } catch (err) {
