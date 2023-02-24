@@ -4,3 +4,12 @@
 .right{
     color:#B9F3E4;
 }
+p{
+    font-size: 200%;
+    text-align: center;
+}
+body{
+    background-color: #F6DFEB;
+    position: relative;
+
+}

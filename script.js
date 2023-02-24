@@ -33,7 +33,7 @@ async function loadText(url) {
   }
 
   document.addEventListener('click',function(event) {
-    prompt();
+    document.getElementById("dummyInput").focus();
   });
   document.addEventListener('keydown', function(event) {
     var d = document.getElementById("test");
