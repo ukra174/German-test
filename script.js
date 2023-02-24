@@ -43,7 +43,7 @@ async function loadText(url) {
 
       }
       checkLine();
-      document.getElementById("test").innerText = makeLine(text[0]);
+      //document.getElementById("test").innerText = makeLine(text[0]);
     } catch (err) {
       console.error(err);
     }
@@ -102,8 +102,18 @@ function checkLine(){
   document.addEventListener('keydown', function(event) {
     var d = document.getElementById("test");
     //d.innerText = d.innerText+event.key;
+    if(event.key.length>1){
+      return;
+    }
     userInput[userInput.length-1]+=event.key;
+    //userInput[userInput.length-1]+=document.getElementById("dummyInput").value.slice(-1);
     console.log(userInput);
     renderLine(lines[5],id);
     checkLine();
 });
+document.addEventListener("load",loadText("text.txt"));
+function mobileWrite(){
+      userInput[userInput.length-1]+=document.getElementById("dummyInput").value.slice(-1);
+      renderLine(lines[5],id);
+    checkLine();
+}
