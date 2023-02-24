@@ -5,8 +5,10 @@
     color:#B9F3E4;
 }
 p{
-    font-size: 100%;
+    font-size: 200%;
     text-align: center;
+    color: #3C2C3E;
+    margin: 5%;
 }
 body{
     background-color: #F6DFEB;

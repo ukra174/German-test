@@ -99,6 +99,7 @@ function checkLine(){
   document.addEventListener('click',function(event) {
     document.getElementById("dummyInput").focus();
   });
+  if(!navigator.userAgentData.mobile){
   document.addEventListener('keydown', function(event) {
     var d = document.getElementById("test");
     //d.innerText = d.innerText+event.key;
@@ -111,6 +112,7 @@ function checkLine(){
     renderLine(lines[5],id);
     checkLine();
 });
+  }
 document.addEventListener("load",loadText("text.txt"));
 function mobileWrite(){
       userInput[userInput.length-1]+=document.getElementById("dummyInput").value.slice(-1);
