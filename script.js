@@ -102,7 +102,7 @@ function checkLine(){
   document.addEventListener('click',function(event) {
     document.getElementById("dummyInput").focus();
   });
-  if(!navigator.userAgentData.mobile){
+  if(true){//!navigator.userAgentData.mobile){
   document.addEventListener('keydown', function(event) {
     var d = document.getElementById("test");
     //d.innerText = d.innerText+event.key;
