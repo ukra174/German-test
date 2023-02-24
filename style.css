@@ -1,11 +1,6 @@
-body {
-    flex:1;
-    background-color: #EA8FEA;
-    background-color: red;
+.wrong{
+    color: #FFAACF;
 }
-html {
-    background-color: green;
-}
-#highlight{
-    color:red;
+.right{
+    color:#B9F3E4;
 }

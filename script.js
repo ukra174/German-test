@@ -10,7 +10,7 @@ async function loadText(url) {
       for(let i = 0;i<12;i++){
         var d = document.createElement("p");
         document.body.appendChild(d);
-        d.innerText=text[i];
+        d.innerHTML="<span class='wrong'>" + text[i] + "</span>";
         lines.push(d);
 
       }
@@ -32,6 +32,9 @@ async function loadText(url) {
     }
   }
 
+  document.addEventListener('click',function(event) {
+    prompt();
+  });
   document.addEventListener('keydown', function(event) {
     var d = document.getElementById("test");
     d.innerText = d.innerText+event.key;
