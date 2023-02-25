@@ -9,6 +9,7 @@ p{
     text-align: center;
     color: #3C2C3E;
     margin: 5%;
+    font-family: 'Courier New', Courier, monospace
 }
 body{
     background-color: #F6DFEB;
@@ -23,6 +24,12 @@ textarea:focus, input:focus{
     top:-20px;
 }
 
+.score{
+    position:relative;
+    text-align: left;
+    color: rgb(218, 209, 168);
+    font-size: 150%;
+}
 @keyframes example {
     0%   {background-color: rgba(255, 255, 255, 0);color: rgba(0,0,0,0);top:-50px;border-color: transparent;}
     40%  {top:0px}
