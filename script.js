@@ -129,7 +129,7 @@ function mobileWrite(){
 
 
 
-if(window.innerHeight > window.innerWidth){
+if(true){
 
 var input = document.getElementById('credit-card-mask'),
     oldValue,
