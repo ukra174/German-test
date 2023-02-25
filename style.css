@@ -19,11 +19,6 @@ body{
 textarea:focus, input:focus{
     outline: none;
 }
-.translation{
-    position: relative;
-    top:-20px;
-}
-
 .score{
     position:relative;
     text-align: left;
