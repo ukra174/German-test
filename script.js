@@ -129,7 +129,7 @@ function mobileWrite(){
 
 
 
-if(window.orientation>1){
+if(window.orientation<1){
 
 var input = document.getElementById('credit-card-mask'),
     oldValue,
