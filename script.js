@@ -3,6 +3,7 @@ var id = 0;
 var lines = [];
 var userInput = [];
 var linesReady = [];
+var score = 0;
 function makeLine(line){ 
   var newWords = [];
   var words = line.split(" ");
@@ -11,7 +12,7 @@ function makeLine(line){
       var gap = Math.ceil(element.length/2);
       var sym = "";
       var i1 = element.length-gap;
-      if([".",",","?","!",":",'"',"."," "].includes(element.slice(-1))){
+      if([".",",","?","!",":",'"',"."," ","\n",";"].includes(element.slice(-1))){
         sym = element.slice(-1);
         gap = Math.ceil((element.length-1)/2);
         i1 = element.length-1-gap;
@@ -81,6 +82,7 @@ async function loadText(url) {
         if(userInput[id]!= undefined && userInput[id][index]!=undefined){
           if(userInput[id][index]==text[id][i]){
               outText+="<span class='right'>"+userInput[id][index]+"</span>";
+              score++;
           }else{
             outText+="<span class='wrong'>"+userInput[id][index]+"</span>";
           }
@@ -102,6 +104,7 @@ function checkLine(){
   if(!lines[5].innerText.includes("_")){
     up();
   }
+  document.getElementById("score").innerText = score;
 }
   document.addEventListener('click',function(event) {
     document.getElementById("credit-card-mask").focus();
@@ -110,9 +113,9 @@ function checkLine(){
   document.addEventListener('keydown', function(event) {
     var d = document.getElementById("test");
     //d.innerText = d.innerText+event.key;
-    if(event.key.length>1){
+    //if(event.key.length>1){//turn this off for physical kb input
       return;
-    }
+    //}
     userInput[userInput.length-1]+=event.key;
     //userInput[userInput.length-1]+=document.getElementById("dummyInput").value.slice(-1);
     console.log(userInput);
