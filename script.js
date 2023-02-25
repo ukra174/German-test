@@ -38,8 +38,9 @@ async function loadText(url) {
         var d = document.createElement("p");
         document.body.appendChild(d);
         d.innerText=linesReady[i-5];
+        d.className = "hoverable";
         lines.push(d);
-        renderLine(lines[i],id-5);
+        renderLine(lines[i],id-5+i);
 
       }
       setTimeout(function(){
@@ -55,7 +56,7 @@ async function loadText(url) {
     userInput.push("");
     id+=1;
     for(var j = 0;j<12;j++){
-      renderLine(lines[j],j+id-5);
+      renderLine(lines[j],j+id-5,j<5);
     }
     checkLine();
   }
@@ -65,7 +66,7 @@ async function loadText(url) {
       lines[i].innerText=text[i+id];
     }
   }
-  function renderLine(obj,id){
+  function renderLine(obj,id, show=false){
     if(id<0){
       obj.innerText = "";
     }
@@ -93,6 +94,9 @@ async function loadText(url) {
       }
     }
     obj.innerHTML = outText;
+    if(show){
+    obj.innerHTML+= "<span class='hoverable__tooltip'>"+text[id]+ "</span>";
+    }
   }
 function checkLine(){
   if(!lines[5].innerText.includes("_")){
@@ -125,7 +129,7 @@ function mobileWrite(){
 
 
 
-
+if(window.orientation>1){
 
 var input = document.getElementById('credit-card-mask'),
     oldValue,
@@ -157,3 +161,4 @@ var input = document.getElementById('credit-card-mask'),
 
 input.addEventListener('keydown', keyDownHandler);
 input.addEventListener('input', inputHandler);
+  }
