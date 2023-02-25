@@ -23,32 +23,37 @@ textarea:focus, input:focus{
     top:-20px;
 }
 
-
 @keyframes example {
-    0%   {background-color: rgba(255, 255, 255, 0);color: rgba(0,0,0,0);}
-    100% {background-color: rgba(255, 255, 255, 0.8);color: rgba(0,0,0,0.8);}
+    0%   {background-color: rgba(255, 255, 255, 0);color: rgba(0,0,0,0);top:-50px;border-color: transparent;}
+    40%  {top:0px}
+    100% {background-color: #ffd8ed;color: #060047;top:0px;border-color: black;}
   }
 
 .hoverable {
     position: relative;
-    text-align: center;
   }
   
   .hoverable>.hoverable__tooltip {
     display: none;
-    animation-duration: 4s;
+    z-index: 10;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
   }
   
   .hoverable:hover>.hoverable__tooltip {
-    display: inline;
+    display:inline;
     position: absolute;
+    text-align: center;
     top:0px;
     left:0px;
     margin:5%;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: rgba(0,0,0,0.8);
+    background-color: #ffd8ed;
+    color: #060047;
     border: 1px solid black;
     border-radius: 30px;
     animation-name: example;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
