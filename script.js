@@ -104,7 +104,7 @@ function checkLine(){
   }
 }
   document.addEventListener('click',function(event) {
-    document.getElementById("dummyInput").focus();
+    document.getElementById("credit-card-mask").focus();
   });
   if(true){//!navigator.userAgentData.mobile){
   document.addEventListener('keydown', function(event) {
@@ -129,7 +129,7 @@ function mobileWrite(){
 
 
 
-if(window.orientation<1){
+if(window.innerHeight > window.innerWidth){
 
 var input = document.getElementById('credit-card-mask'),
     oldValue,
