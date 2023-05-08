@@ -45,7 +45,10 @@ async function loadText(url) {
         renderLine(lines[i],id-5+i);
 
       }
-      id = Math.floor(Math.random()*lines.length);
+      //id = Math.floor(Math.random()*lines.length);
+      for(let i = 0;i<Math.floor(Math.random()*1000);i++){
+        up();
+      }
       setTimeout(function(){
     document.getElementById("dummyInput").focus();
 },100);
