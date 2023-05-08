@@ -15,9 +15,8 @@ async function loadText(url) {
     }
     function newSentence(){
         var text = sentences[Math.floor(Math.random()*sentences.length)];
-        if(text.length>120 || text.length<30){
-            newSentence();
-            break;
+        while(text.length>120 || text.length<30){
+            text = sentences[Math.floor(Math.random()*sentences.length)];
         }
         var words = text.split(" ");
         var wordCount = Math.floor(words.length/2);
