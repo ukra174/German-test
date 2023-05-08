@@ -19,14 +19,14 @@ async function loadText(url) {
         var wordCount = Math.floor(words.length/2);
         var start = 1+Math.round(Math.random()*(words.length-wordCount));
         var newText = "";
-        var prompt = "(";
+        var prompt = [];
         for(let i = 0;i<words.length;i++){
             if(i<start || i>(start+wordCount)){
                 newText+=words[i]+" ";
             }else{
                 var bareWord = words[i].replace(",","").replace(".","").replace("\n","").toLowerCase();
                 if(!ignoreWords.includes(bareWord)){
-                    prompt+=bareWord+", ";
+                    prompt.push(bareWord);
                     newText+="__________";
                     if(words[i].includes("\n")){
                         newText+="\n";
@@ -34,11 +34,11 @@ async function loadText(url) {
                 }
             }
         }
-        prompt+=")";
+        prompt.sort();
         newText+=".";
         text+=".";
         document.getElementById("sentence").innerText = newText;
         document.getElementById("spoiler").innerText = text;
-        document.getElementById("prompt").innerText = prompt;
+        document.getElementById("prompt").innerText = "(" + prompt.join(", ") + ")";
   }
   document.addEventListener("load",loadText("text.txt"));
