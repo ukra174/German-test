@@ -25,7 +25,7 @@ async function loadText(url) {
                 newText+=words[i]+" ";
             }else{
                 var bareWord = words[i].replace(",","").replace(".","").replace("\n","").toLowerCase();
-                if(!(bareWord in ignoreWords)){
+                if(!ignoreWords.includes(bareWord)){
                     prompt+=bareWord+", ";
                     newText+="__________";
                 }
