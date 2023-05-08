@@ -22,9 +22,9 @@ async function loadText(url) {
         var prompt = "(";
         for(let i = 0;i<words.length;i++){
             if(i<start || i>(start+wordCount)){
-                newText+=words[i]+"\n";
+                newText+=words[i]+" ";
             }else{
-                if(!words[i].replace(",","").replace(".","").lower() in ignoreWords){
+                if(!words[i].replace(",","").replace(".","").toLowerCase() in ignoreWords){
                     prompt+=words[i]+", ";
                     newText+="_______";
                 }
