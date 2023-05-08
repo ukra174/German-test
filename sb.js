@@ -4,7 +4,7 @@ async function loadText(url) {
         try {
         const response = await fetch(url);
         const data = await response.text();
-        allText = data;
+        var allText = data;
         var sentences = allText.split(".");
         var text = sentence[Math.floor(Math.random()*sentences.length)];
         var words = text.split(" ");
