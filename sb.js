@@ -15,7 +15,7 @@ async function loadText(url) {
     }
     function newSentence(){
         var text = sentences[Math.floor(Math.random()*sentences.length)];
-        if(text.length>120 && text.length<30){
+        if(text.length>120 || text.length<30){
             newSentence();
             break;
         }
