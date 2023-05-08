@@ -67,3 +67,16 @@ textarea:focus, input:focus{
     animation-name: example;
     animation-duration: 0.5s;
   }
+  .next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    color: #3C2C3E;
+    margin: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+}
