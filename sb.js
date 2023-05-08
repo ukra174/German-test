@@ -32,6 +32,8 @@ async function loadText(url) {
             }
         }
         prompt+=")";
+        newText+=".";
+        text+=".";
         document.getElementById("sentence").innerText = newText;
         document.getElementById("spoiler").innerText = text;
         document.getElementById("prompt").innerText = prompt;
