@@ -1,5 +1,5 @@
 
-const ignoreWords = ["ist","sind","bin","seid","bist","werden","werde","wird","werdet","werdest","wurde","wurden","wurdet","wurdest","als","wie","dass","auch","nur","wegen","von","aus","auf","in","im","zu","zum","zur","an","am","mit","ohne","die","der","das","den","dem","dessen","denen","deren","des","ihm","ihr","ihn","ihnen","ihre","ihrem","ihren","sein","seinem","seinen","seiner","euch","uns","sich","mich"];
+const ignoreWords = ["ist","sind","bin","seid","bist","werden","werde","wird","werdet","werdest","wurde","wurden","wurdet","wurdest","als","wie","dass","auch","nur","wegen","von","aus","auf","in","im","zu","zum","zur","an","am","mit","ohne","die","der","das","den","dem","dessen","denen","deren","des","ihm","ihr","ihn","ihnen","ihre","ihrem","ihren","sein","seinem","seinen","seiner","euch","uns","sich","mich","sie","er","es","wir","ich","ihr"];
 var allText = "";
 var sentences = [];
 async function loadText(url) {
