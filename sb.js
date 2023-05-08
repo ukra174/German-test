@@ -31,7 +31,7 @@ async function loadText(url) {
             }
         }
         prompt+=")";
-        document.getElementById("sentence").text = newText;
-        document.getElementById("spoiler").text = prompt;
+        document.getElementById("sentence").innerText = newText;
+        document.getElementById("spoiler").innerText = prompt;
   }
   document.addEventListener("load",loadText("text.txt"));
