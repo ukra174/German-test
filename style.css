@@ -28,7 +28,7 @@ textarea:focus, input:focus{
 @keyframes example {
     0%   {background-color: rgba(255, 255, 255, 0);color: rgba(0,0,0,0);top:-50px;border-color: transparent;}
     40%  {top:0px}
-    100% {background-color: #ffd8ed;color: #060047;top:0px;border-color: black;}
+    100% {background-color: #3a222f;color: #060047;top:0px;border-color: black;}
   }
 
 .hoverable {
