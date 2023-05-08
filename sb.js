@@ -15,6 +15,10 @@ async function loadText(url) {
     }
     function newSentence(){
         var text = sentences[Math.floor(Math.random()*sentences.length)];
+        if(text.length>120 && text.length<30){
+            newSentence();
+            break;
+        }
         var words = text.split(" ");
         var wordCount = Math.floor(words.length/2);
         var start = 1+Math.round(Math.random()*(words.length-wordCount));
@@ -27,7 +31,7 @@ async function loadText(url) {
                 var bareWord = words[i].replace(",","").replace(".","").replace("\n","").toLowerCase();
                 if(!ignoreWords.includes(bareWord)){
                     prompt.push(bareWord);
-                    newText+="__________";
+                    newText+="_________";
                     if(words[i].includes("\n")){
                         newText+="\n";
                     }
