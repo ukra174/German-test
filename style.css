@@ -31,6 +31,14 @@ textarea:focus, input:focus{
     100% {background-color: #ffd8ed;color: #060047;top:0px;border-color: black;}
   }
 
+
+.spoiler{
+  color:black;
+  background-color: black;
+}
+.spoiler:hover{
+  background-color: transparent;
+}
 .hoverable {
     position: relative;
   }
