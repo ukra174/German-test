@@ -30,7 +30,7 @@ async function loadText(url) {
       const response = await fetch(url);
       const data = await response.text();
       text = data;
-      id = Math.floor(Math.random()*text.length);
+      
       userInput.push("");
       text = text.split("\n");
       text.forEach(element => {
@@ -45,6 +45,7 @@ async function loadText(url) {
         renderLine(lines[i],id-5+i);
 
       }
+      id = Math.floor(Math.random()*lines.length);
       setTimeout(function(){
     document.getElementById("dummyInput").focus();
 },100);
