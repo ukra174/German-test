@@ -28,6 +28,9 @@ async function loadText(url) {
                 if(!ignoreWords.includes(bareWord)){
                     prompt+=bareWord+", ";
                     newText+="__________";
+                    if(words[i].includes("\n")){
+                        newText+="\n";
+                    }
                 }
             }
         }
