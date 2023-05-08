@@ -24,14 +24,15 @@ async function loadText(url) {
             if(i<start || i>(start+wordCount)){
                 newText+=words[i]+" ";
             }else{
-                if(!words[i].replace(",","").replace(".","").toLowerCase() in ignoreWords){
+                if(!(words[i].replace(",","").replace(".","").toLowerCase() in ignoreWords)){
                     prompt+=words[i]+", ";
-                    newText+="_______";
+                    newText+="__________";
                 }
             }
         }
         prompt+=")";
         document.getElementById("sentence").innerText = newText;
-        document.getElementById("spoiler").innerText = prompt;
+        document.getElementById("spoiler").innerText = text;
+        document.getElementById("prompt").innerText = prompt;
   }
   document.addEventListener("load",loadText("text.txt"));
