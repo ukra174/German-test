@@ -51,7 +51,7 @@ async function loadText(url) {
     pram = params.get("set");
   }
   document.addEventListener("load",loadText(pram));
-  slider = document.getElementById("difficulty");
+  var slider = document.getElementById("difficulty");
   slider.oninput = function() {
     difficulty = this.value;
   }
