@@ -20,7 +20,7 @@ async function loadText(url) {
             text = sentences[Math.floor(Math.random()*sentences.length)];
         }
         var words = text.replace("\n"," \n").split(" ");
-        var wordCount = Math.floor(words.length*difficulty);
+        var wordCount = Math.floor(words.length*difficulty/6);
         var start = 1+Math.round(Math.random()*(words.length-wordCount));
         var newText = "";
         var prompt = [];
