@@ -29,7 +29,7 @@ async function loadText(url) {
             }else{
                 var bareWord = words[i].replace(",","").replace(".","").replace("\n","").toLowerCase();
                 if(!ignoreWords.includes(bareWord)){
-                    prompt.push(bareWord);
+                    prompt.push(words[i].replace(",","").replace(".","").replace("\n",""));
                     newText+="_________";
                     if(words[i].includes("\n")){
                         newText+="\n";
