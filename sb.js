@@ -45,7 +45,12 @@ async function loadText(url) {
         document.getElementById("spoiler").innerText = text;
         document.getElementById("prompt").innerText = "(" + prompt.join(", ") + ")";
   }
-  document.addEventListener("load",loadText("text.txt"));
+  const params = new URLSearchParams(window.location.search);
+  var pram = "text.txt";
+  if(params.has("set")){
+    pram = params.get("set");
+  }
+  document.addEventListener("load",loadText(pram));
   slider = document.getElementById("difficulty")
   slider.oninput = function() {
     difficulty = slider.value;
