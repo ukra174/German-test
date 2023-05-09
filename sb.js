@@ -50,8 +50,11 @@ async function loadText(url) {
   if(params.has("set")){
     pram = params.get("set");
   }
-  document.addEventListener("load",loadText(pram));
-  var slider = document.getElementById("difficulty");
-  slider.oninput = function() {
-    difficulty = this.value;
+  function loadPage(){
+    loadText(pram);
+    var slider = document.getElementById("difficulty");
+    slider.oninput = function() {
+      difficulty = this.value;
+    }
   }
+  document.addEventListener("load",loadPage());
