@@ -18,7 +18,7 @@ async function loadText(url) {
         while(text.length>120 || text.length<45){
             text = sentences[Math.floor(Math.random()*sentences.length)];
         }
-        var words = text.split(" ");
+        var words = text.replace("\n"," \n").split(" ");
         var wordCount = Math.floor(words.length/2);
         var start = 1+Math.round(Math.random()*(words.length-wordCount));
         var newText = "";
