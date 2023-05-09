@@ -51,11 +51,12 @@ async function loadText(url) {
     pram = params.get("set");
   }
   function loadPage(){
-    
-    var slider = document.getElementById("difficulty");
-    slider.oninput = function() {
-      difficulty = this.value;
-    };
     loadText(pram);
+    setTimeout(() => {
+        var slider = document.getElementById("dif");
+        slider.oninput = function() {
+          difficulty = this.value;
+        };
+    }, 1);
   }
   window.addEventListener("load",loadPage());
