@@ -2,7 +2,7 @@
 const ignoreWords = ["ist","sind","bin","seid","bist","werden","werde","wird","werdet","werdest","wurde","wurden","wurdet","wurdest","als","wie","dass","auch","nur","wegen","von","aus","auf","in","im","zu","zum","zur","an","am","mit","ohne","die","der","das","den","dem","dessen","denen","deren","des","ihm","ihr","ihn","ihnen","ihre","ihrem","ihren","sein","seinem","seinen","seiner","euch","uns","sich","mich","sie","er","es","wir","ihr","und","auch","\n"," ","-",",","","dich","mir","dir"];
 var allText = "";
 var sentences = [];
-var difficulty = 3;
+var difficulty = 2;
 async function loadText(url) {
         try {
         const response = await fetch(url);
