@@ -146,8 +146,9 @@ function checkLine(){
   linesReady = []; 
  score = 0;  
 document.getElementById("cont").innerHTML = "";
+text = "";
 loadText(param);
-text = "";  }; 
+  }; 
      }, 1); 
    } 
    window.addEventListener("load",loadPage());
