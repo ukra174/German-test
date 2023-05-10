@@ -138,7 +138,7 @@ function checkLine(){
      loadText(pram); 
      setTimeout(() => { 
          var slider = document.getElementById("dif"); 
-         slider.oninput = function() { 
+         slider.onmouseup = function() { 
            difficulty = this.value; 
 
      lines = []; 
@@ -147,7 +147,7 @@ function checkLine(){
  score = 0;  
 document.getElementById("cont").innerHTML = "";
 text = "";
-loadText(param);
+loadText(pram);
   }; 
      }, 1); 
    } 
