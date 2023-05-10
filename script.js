@@ -140,7 +140,14 @@ function checkLine(){
          var slider = document.getElementById("dif"); 
          slider.oninput = function() { 
            difficulty = this.value; 
-         }; 
+
+     lines = []; 
+  userInput = []; 
+  linesReady = []; 
+ score = 0;  
+document.getElementById("cont").innerHTML = "";
+loadText(param);
+text = "";  }; 
      }, 1); 
    } 
    window.addEventListener("load",loadPage());
