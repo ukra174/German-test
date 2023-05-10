@@ -39,7 +39,7 @@ async function loadText(url) {
       });
       for(let i = 0;i<12;i++){
         var d = document.createElement("p");
-        document.body.appendChild(d);
+        document.getElementById("cont").appendChild(d);
         d.innerText=linesReady[i-5];
         d.className = "hoverable";
         lines.push(d);
