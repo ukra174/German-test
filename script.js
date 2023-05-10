@@ -128,7 +128,21 @@ function checkLine(){
     checkLine();
 });
   }
-document.addEventListener("load",loadText("text.txt"));
+  const params = new URLSearchParams(window.location.search); 
+   var pram = "text.txt"; 
+   if(params.has("set")){ 
+     pram = params.get("set"); 
+   } 
+   function loadPage(){ 
+     loadText(pram); 
+     setTimeout(() => { 
+         var slider = document.getElementById("dif"); 
+         slider.oninput = function() { 
+           difficulty = this.value; 
+         }; 
+     }, 1); 
+   } 
+   window.addEventListener("load",loadPage());
 function mobileWrite(){
       userInput[userInput.length-1]+=document.getElementById("dummyInput").value.slice(-1);
       renderLine(lines[5],id);
