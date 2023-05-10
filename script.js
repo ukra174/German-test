@@ -9,7 +9,7 @@ function makeLine(line){
   var newWords = [];
   var words = line.split(" ");
   words.forEach(element => {
-    if(element.length>1 && Math.random()>(0.2+(5-difficulty))){
+    if(element.length>1 && Math.random()>(0.2+(5-difficulty)*0.15)){
       var gap = Math.ceil(element.length/2);
       var sym = "";
       var i1 = element.length-gap;
