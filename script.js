@@ -4,7 +4,7 @@ var lines = [];
 var userInput = [];
 var linesReady = [];
 var score = 0;
-var difficulty = 2;
+var difficulty = 6;
 function makeLine(line){ 
   var newWords = [];
   var words = line.split(" ");
