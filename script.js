@@ -132,7 +132,7 @@ function checkLine(){
      pram = params.get("set"); 
    } 
    function loadPage(){ 
-     loadText(pram); 
+     //loadText(pram); 
      setTimeout(() => { 
          var slider = document.getElementById("dif"); 
          slider.oninput = function() { 
@@ -146,7 +146,7 @@ document.getElementById("cont").innerHTML = "";
 text = "";
 loadText(pram);
   }; 
-     }, 1); 
+     }, 0.5); 
    } 
    window.addEventListener("load",loadPage());
 function mobileWrite(){
