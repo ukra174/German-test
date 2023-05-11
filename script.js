@@ -50,9 +50,6 @@ async function loadText(url) {
       for(let i = 0;i<Math.floor(Math.random()*1000);i++){
         up();
       }
-      setTimeout(function(){
-    document.getElementById("dummyInput").focus();
-},100);
       checkLine();
       //document.getElementById("test").innerText = makeLine(text[0]);
     } catch (err) {
