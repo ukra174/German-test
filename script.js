@@ -132,21 +132,20 @@ function checkLine(){
      pram = params.get("set"); 
    } 
    function loadPage(){ 
-     //loadText(pram); 
+     loadText(pram); 
      setTimeout(() => { 
-         var slider = document.getElementById("dif"); 
-         slider.oninput = function() { 
-           difficulty = this.value; 
-
-     lines = []; 
-  userInput = []; 
-  linesReady = []; 
- score = 0;  
-document.getElementById("cont").innerHTML = "";
-text = "";
-loadText(pram);
+      var slider = document.getElementById("dif"); 
+      slider.oninput = function() { 
+      difficulty = this.value;
+      lines = []; 
+      userInput = []; 
+      linesReady = []; 
+      score = 0;  
+      document.getElementById("cont").innerHTML = "";
+      text = "";
+      loadText(pram);
   }; 
-     }, 0.5); 
+     }, 1); 
    } 
    window.addEventListener("load",loadPage());
 function mobileWrite(){
