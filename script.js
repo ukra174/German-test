@@ -104,6 +104,12 @@ async function loadText(url) {
     }
   }
 function checkLine(){
+  console.log(lines.length);
+  console.log(text.length);
+  console.log(linesReady.length);
+  console.log(userInput.length);
+
+
   if(!lines[5].innerText.includes("_")){
     up();
   }
