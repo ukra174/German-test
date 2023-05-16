@@ -37,7 +37,7 @@ async function loadText(url) {
     try {
       const response = await fetch(url);
       const data = await response.text();
-      text = data;
+      text = data.substring(Math.floor(Math.random()*data.length));
       
       userInput.push("");
       text = text.split("\n");
@@ -54,9 +54,6 @@ async function loadText(url) {
 
       }
       //id = Math.floor(Math.random()*lines.length);
-      for(let i = 0;i<Math.floor(Math.random()*1000);i++){
-        up();
-      }
       checkLine();
       //document.getElementById("test").innerText = makeLine(text[0]);
     } catch (err) {
