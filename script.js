@@ -1,3 +1,4 @@
+//this all is fucking messed up
 var text = "";
 var id = 0;
 var lines = [];
@@ -135,21 +136,24 @@ function checkLine(){
   const params = new URLSearchParams(window.location.search); 
    var pram = "text.txt"; 
    if(params.has("set")){ 
-     pram = params.get("set"); 
+     pram = params.get("set");
    } 
+   if(params.has("dif")){
+    difficulty = parseFloat(params.get("dif"));
+    setTimeout(() => {
+      document.getElementById("dif").value = difficulty;
+    }, 20);
+   }
    function loadPage(){ 
      loadText(pram); 
      setTimeout(() => { 
       var slider = document.getElementById("dif"); 
-      slider.oninput = function() { 
-      difficulty = this.value;
-      lines = []; 
-      userInput = []; 
-      linesReady = []; 
-      score = 0;  
-      document.getElementById("cont").innerHTML = "";
-      text = "";
-      loadText(pram);
+      slider.onmouseup = function() { 
+        if(params.has("set")){
+          window.location.replace("index.html?dif="+slider.value.toString()+ "&set="+params.get("set"));
+        }else{
+          window.location.replace("index.html?dif="+slider.value.toString());
+        }
   }; 
      }, 1); 
    } 
