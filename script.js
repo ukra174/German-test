@@ -151,7 +151,7 @@ function checkLine(){
      loadText(pram); 
      setTimeout(() => { 
       var slider = document.getElementById("dif"); 
-      slider.onmouseup = function() { 
+      slider.onchange = function() { 
         if(params.has("set")){
           window.location.replace("index.html?dif="+slider.value.toString()+ "&set="+params.get("set"));
         }else{
