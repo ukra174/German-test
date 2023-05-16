@@ -14,7 +14,8 @@ function makeLine(line){
       var gap = Math.ceil(element.length/2);
       var sym = "";
       var i1 = element.length-gap;
-      if([".",",","?","!",":",'"',"."," ","\n",";"," "].includes(element.slice(-1))){
+      element = element.replace("\n","");
+      if([".",",","?","!",":",'"',"."," ","\n",";"," ","\t","\r"].includes(element.slice(-1))){
         sym = element.slice(-1);
         gap = Math.ceil((element.length-1)/2);
         i1 = element.length-1-gap;
@@ -27,7 +28,9 @@ function makeLine(line){
     }
   });
   var sentence = newWords.join(" ");
-  sentence = sentence.substring(0,sentence.length-1);
+  //if([".",",","?","!",":",'"',"."," ","\n",";"," "].includes(words[words.length-1][words[words.length-1].length-1])){
+  //sentence = sentence.substring(0,sentence.length-1);
+  //}
   return(sentence);
 }
 async function loadText(url) {
