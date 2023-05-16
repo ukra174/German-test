@@ -8,7 +8,7 @@ var score = 0;
 var difficulty = 2;
 function makeLine(line){ 
   var newWords = [];
-  var words = line.split(" ");
+  var words = line.replace("\n","").split(" ");
   words.forEach(element => {
     if(element.length>1 && Math.random()>(0.2+(5-difficulty)*0.15)){
       var gap = Math.ceil(element.length/2);
