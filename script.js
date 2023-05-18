@@ -84,8 +84,13 @@ async function loadText(url) {
       obj.innerText="";
       return;
     }
-    for(var i = 0;i<linesReady[id].length;i++){
+    for(var i = 0;i<linesReady[id].length+1;i++){
       if(linesReady[id][i]=="_"){
+        if(i==linesReady[id].length){
+          outText+="<span class='cursor'>"+userInput[id][index]+"</span>";
+          index++;
+          break;
+        }
         if(userInput[id]!= undefined && userInput[id][index]!=undefined){
           if(userInput[id][index]==text[id][i]){
               outText+="<span class='right'>"+userInput[id][index]+"</span>";
