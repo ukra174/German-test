@@ -84,7 +84,7 @@ async function loadText(url) {
       obj.innerText="";
       return;
     }
-    for(var i = 0;i<linesReady[id].length+1;i++){
+    for(var i = 0;i<linesReady[id].length;i++){
       if(linesReady[id][i]=="_"){
         if(index==userInput[id].length){
           outText+="<span class='cursor'>_</span>";
