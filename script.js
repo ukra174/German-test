@@ -86,11 +86,7 @@ async function loadText(url) {
     }
     for(var i = 0;i<linesReady[id].length;i++){
       if(linesReady[id][i]=="_"){
-        if(index==userInput[id].length){
-          outText+="<span class='cursor'>_</span>";
-          index++;
-          continue;
-        }
+        
         if(userInput[id]!= undefined && userInput[id][index]!=undefined){
           if(userInput[id][index]==text[id][i]){
               outText+="<span class='right'>"+userInput[id][index]+"</span>";
@@ -99,10 +95,13 @@ async function loadText(url) {
             outText+="<span class='wrong'>"+userInput[id][index]+"</span>";
           }
         }else{
-          outText+="_";
+          if(index==userInput[id].length){
+            outText+="<span class='cursor'>_</span>";
+          }else{
+            outText+="_";
+          }
         }
         index++;
-        
       }else{
         outText+=linesReady[id][i];
       }
