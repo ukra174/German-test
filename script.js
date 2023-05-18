@@ -86,10 +86,10 @@ async function loadText(url) {
     }
     for(var i = 0;i<linesReady[id].length+1;i++){
       if(linesReady[id][i]=="_"){
-        if(i==linesReady[id].length){
-          outText+="<span class='cursor'>"+userInput[id][index]+"</span>";
+        if(index==userInput[id].length){
+          outText+="<span class='cursor'>_</span>";
           index++;
-          break;
+          continue;
         }
         if(userInput[id]!= undefined && userInput[id][index]!=undefined){
           if(userInput[id][index]==text[id][i]){
