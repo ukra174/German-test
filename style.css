@@ -137,3 +137,12 @@ border-radius: 50%;
 background: #361a28;
 cursor: pointer;
 }
+.cursor{
+  color:white;
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

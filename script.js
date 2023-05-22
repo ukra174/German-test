@@ -98,10 +98,15 @@ async function loadText(url) {
             outText+="<span class='wrong'>"+userInput[id][index]+"</span>";
           }
         }else{
-          outText+="_";
+          try{
+          if(index==userInput[id].length){
+            outText+="<span class='cursor'>_</span>";
+          }else{
+            outText+="_";
+          }}
+          catch{outText+="_";}
         }
         index++;
-        
       }else{
         outText+=linesReady[id][i];
       }
