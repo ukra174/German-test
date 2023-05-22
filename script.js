@@ -86,6 +86,10 @@ async function loadText(url) {
     }
     for(var i = 0;i<linesReady[id].length;i++){
       if(linesReady[id][i]=="_"){
+        if(!text[id][i].match(/[a-zA-ZäöüßÄÖÜẞ]/i)){
+          outText+=text[id][i];
+          continue;
+        }
         if(userInput[id]!= undefined && userInput[id][index]!=undefined){
           if(userInput[id][index]==text[id][i]){
               outText+="<span class='right'>"+userInput[id][index]+"</span>";
