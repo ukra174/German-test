@@ -60,11 +60,12 @@ textarea:focus, input:focus{
 
 
 .spoiler{
-color:black;
+color:transparent;
 background-color: black;
 }
 .spoiler:hover{
 background-color: transparent;
+color:black;
 }
 .hoverable {
   position: relative;
