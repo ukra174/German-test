@@ -151,12 +151,32 @@ cursor: pointer;
   display: flex;
   padding:10pt;
   justify-content: space-between;
-  margin-left: 100pt;
-  margin-right: 100pt;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 15%;
 }
 button{
   padding: 5pt;
+  margin-left:20pt;
+  margin-right:20pt;
   box-shadow: 0 0 30px rgb(184, 184, 184);
   font-size: 20pt;
   border: none;
+}
+.prepText{
+  font-size: 300%;
+}
+@media (orientation: portrait) {
+  .container{
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 65%;
+  }
+  button{
+    font-size: 300%;
+  }
+  .prepText{
+    font-size: 500%;
+  }
+
 }
