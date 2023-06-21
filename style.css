@@ -147,3 +147,16 @@ cursor: pointer;
     opacity: 0;
   }
 }
+.container {
+  display: flex;
+  padding:10pt;
+  justify-content: space-between;
+  margin-left: 100pt;
+  margin-right: 100pt;
+}
+button{
+  padding: 5pt;
+  box-shadow: 0 0 30px rgb(184, 184, 184);
+  font-size: 20pt;
+  border: none;
+}
