@@ -6,7 +6,7 @@ Array.prototype.remove = function(item) {
     }
   };
 function getRandomPrep(count, blacklisted){
-    var preps = ["an","auf","mit","zu","in","gegen","von","aus"];
+    var preps = ["an","auf","mit","zu","in","gegen","von","aus","vor","bis","um"];
     preps.remove(blacklisted);
     var output = [];
     for(var i = 0;i<count;i++){
