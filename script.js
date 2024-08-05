@@ -37,7 +37,7 @@ async function loadText(url) {
     try {
       const response = await fetch(url);
       const data = await response.text();
-      text = data.substring(Math.floor(Math.random()*data.length)).split('.', 1)[1];
+      text = data.substring(Math.floor(Math.random()*data.length)).split('.').slice(1).join('.');
       userInput.push("");
       text = text.split("\n");
       text.forEach(element => {
